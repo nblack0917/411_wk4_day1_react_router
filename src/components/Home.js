@@ -1,13 +1,13 @@
 import React from 'react'
 import { Card, CardContent, CardActions, Divider } from '@material-ui/core'
-import cars from '../cars.json'
+// import cars from '../cars.json'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
-    console.log('CARS', cars)
+const Home = (props) => {
+    console.log('CARS', props.cars)
     return (
         <div className="card-container">
-            {cars.map((car, idx) => (
+            {props.cars.map((car, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">
                         <span>{car.Name.toUpperCase()}</span>
